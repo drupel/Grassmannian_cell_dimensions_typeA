@@ -1,10 +1,15 @@
-\documentclasss{amsart}
+\documentclass{amsart}
 \usepackage[margin=1in]{geometry}
-\usepackage{amsmath.amssymb,latexsym}
+\usepackage{amsmath,amssymb,latexsym}
 
-\newtheorem{theorem}{Theorem}
+\newtheorem{thm}{Theorem}
+\newtheorem{dfn}{Definition}
 
-\title{Two-Step Flag Varieties via Compatible Subsets of Maximal Dyck Paths}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\bfa}{\mathbf{a}}
+
+\title{Two-Step Flag Varieties via\\ Compatible Subsets of Maximal Dyck Paths}
 
 \author{Colleen Robichaux}
 \author{Dylan Rupel}
@@ -32,9 +37,9 @@
     \end{cases}
   \]
   The following is an analogue of \cite[Conjecture 5.21]{rupel-weist}.
-  \begin{theorem}
+  \begin{thm}
     Given a compatible subset $S\subset D_n$ with $|S\cap H_n|=n-k_1$ and $|S\cap V_n|=k_2$, the affine cell in $Gr_{(k_1,k_2)}(\CC^n\leftarrow\CC^n)$ labeled by $S$ has dimension $d_S$.
-  \end{theorem}
+  \end{thm}
 
   \section{Compatible Subsets of Maximal Dyck Paths}
   Given $\bfa\in\ZZ_{\ge0}^2$, let $D_\bfa$ denote the maximal Dyck path in the lattice rectangle with corner vertices $(0,0)$ and $\bfa$.
@@ -43,11 +48,11 @@
   Write $H_\bfa$ (resp. $V_\bfa$) for the set of horizontal (resp. vertical) edges in $D_\bfa$.
   Note that the set $H_\bfa\sqcup V_\bfa$ has a natural ordering coming from the placement of edges along $D_\bfa$. 
 
-  \begin{definition}
+  \begin{dfn}
     Fix $n\ge1$.
     A subset $S\subset H_\bfa\sqcup V_\bfa$ is \emph{$n$-compatible} if: for each $h\in H_\bfa$ and $v\in V_\bfa$ with $h<v$, there exists an edge $e$ with $h\le e\le v$ so that at least one of the following holds
     \[e\ne v \qquad \text{and} \qquad \big|\{v'\in V_\bfa:h\le v'\le e\}\big|=n\big|\{h'\in H_\bfa\cap S:h\le h'\le e\}\big|\]
     \[e\ne h \qquad \text{and} \qquad \big|\{h'\in H_\bfa:e\le h'\le v\}\big|=n\big|\{v'\in V_\bfa\cap S:e\le v'\le v\}\big|\]
-  \end{definition}
+  \end{dfn}
 
 \end{document}
